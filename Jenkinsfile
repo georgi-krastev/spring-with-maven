@@ -6,7 +6,6 @@ pipeline {
 
     tools {
         maven 'maven'
-        nodejs 'nodejs'
         dockerTool 'docker'
     }
     
@@ -64,7 +63,6 @@ pipeline {
         stage('Deploy') {
            steps {
                 sh 'pkill node | true'
-                sh 'npm install -g forever'
                 sh 'maven install -g forever'
                 sh 'forever start src/main/HelloWorldApplication.java'
            }
