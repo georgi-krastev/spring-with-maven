@@ -5,8 +5,8 @@ pipeline {
     }
 
     tools {
-        maven 'maven'
-        //nodejs 'nodejs'
+        maven 'Maven 3.3.9'
+        nodejs 'nodejs'
         dockerTool 'docker'
     }
     
